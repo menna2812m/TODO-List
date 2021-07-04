@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <title>MyShoppingList</title>
+ 
+      <style>
+        body{
+          background: url("ffll.jpg");
+          background-attachment: fixed;
+          background-size: cover;
+          background-repeat:no-repeat;
+          background-position:center;
+        }
+      </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body >
+   
+
+<div ng-app="todolist" ng-cloak ng-controller="myCtrl"class="col-md-8 mt-5 mx-auto bg-light   " style="max-width:650px; ">
+  
+    <header class="container-fluid bg-primary text-white w3-padding-16" >
+        <h3>TODo List</h3>
+      </header>
+
+<ul class="w3-ul">
+    <li ng-repeat="x in Tasks" class="w3-padding-16"> {{x}} <span ng-click="removeItem($index)" style="cursor: pointer;" class="w3-right w3-margin-right bg-info text-white border border-dark px-3"> Done</span></li>
+</ul>
+<div class="w3-container bg-dark w3-padding-16">
+    <div class="w3-row w3-margin-top">
+      <div class="w3-col s10 ">
+
+        <input placeholder="Add TODO tasks here" ng-model="addMe" class="w3-input w3-border w3-padding ">
+      </div>
+      
+      <div class="w3-col s2 ">
+        <button ng-click="addItem()" class="w3-btn w3-padding w3-green ">Add</button>
+        </div>
+        </div>
+<p class="w3-text-red">{{errortext}}</p>
+</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="tasks.js"></script>
+
+</body>
+</html>
